@@ -41,7 +41,7 @@
 				} else {
 					if (id.indexOf("-") !== - 1) {
 						pairs = id.split("-");
-						parent = getParent(pairs[0]);
+						parent = obj.parent =  getParent(pairs[0]);
 						prefix = pairs[0].substr(0, pairs[0].length - 1);
 						min = getExceptionEdge(pairs[0]);
 						max = getExceptionEdge(pairs[1]);
