@@ -20,6 +20,9 @@
 			getExceptionEdge = function(id) {
 				return parseInt(id.substr(id.length - 1), 10);
 			},
+			getNoc = function(id) {
+				return this.groups[this._indexes.indexOf(id)];
+			},
 			o, id, obj, parent, pairs, prefix, p, min, max;
 
 		for (o = 0; o < root.length; o++) {
@@ -58,7 +61,8 @@
 		return {
 			groups: nocList,
 			roots: roots,
-			_indexes: indexes
+			_indexes: indexes,
+			getNoc: getNoc
 		};
 	}
 
