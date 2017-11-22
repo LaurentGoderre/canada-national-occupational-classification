@@ -17,6 +17,11 @@
 
 				return parent;
 			},
+			getParentFn = function(parent) {
+				return function() {
+					return parent;
+				};
+			},
 			getExceptionEdge = function(id) {
 				return parseInt(id.substr(id.length - 1), 10);
 			},
@@ -37,11 +42,12 @@
 			} else {
 				parent = getParent(id);
 				if (parent !== undefined) {
-					obj.parent = parent;
+					obj.getParent = getParentFn(parent);
 				} else {
 					if (id.indexOf("-") !== - 1) {
 						pairs = id.split("-");
-						parent = obj.parent =  getParent(pairs[0]);
+						parent = getParent(pairs[0]);
+						obj.getParent = getParentFn(parent);
 						prefix = pairs[0].substr(0, pairs[0].length - 1);
 						min = getExceptionEdge(pairs[0]);
 						max = getExceptionEdge(pairs[1]);
