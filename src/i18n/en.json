@@ -126,6 +126,7 @@
       "1422": "Data entry clerks",
       "1423": "Desktop publishing operators and related occupations",
       "143": "Financial, insurance and related administrative support workers",
+      "1431": "Accounting and related clerks",
       "1432": "Payroll administrators",
       "1434": "Banking, insurance and other financial clerks",
       "1435": "Collectors",
@@ -690,7 +691,6 @@
       "9617": "Labourers in food and beverage processing",
       "9618": "Labourers in fish and seafood processing",
       "9619": "Other labourers in processing, manufacturing and utilities"
-
     }
   }
 }
